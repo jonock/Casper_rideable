@@ -19,6 +19,9 @@
     12. Media Queries (Tablet)
     13. Media Queries (Mobile)
     14. Animations
+    15. Sidebar
+    16. Elusive Fonts
+    17. Theme Customisations
 
 */
 
@@ -2220,6 +2223,260 @@ body:not(.post-template) .post-title {
     }
 }
 
+/* ==========================================================================
+   15. Sidebar
+   ========================================================================== */
+
+ .site-wrapper {
+     position: relative;
+     max-width: 1000px;
+     margin: 0 auto;
+     padding-bottom: 60px;
+ }
+
+.content {
+  width: 75%;
+  float: right;
+}
+
+body.author-template .content {
+  /* on the author page the sidebar is not displayed. Show full content width here. */
+  width:100%;
+}
+
+.sidebar {
+  width: 20%;
+  float: left;
+  font-size: 1.4rem;
+  line-height: 1.6em;
+  margin-top: 40px;
+  margin-left: 5%;
+}
+
+.profile-image {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    width:118px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+.sidebar h3 {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #4a4a4a;
+}
+
+.sidebar ul.social li {
+    display: inline
+}
+
+.nav.mobile, nav-cover.mobile, .nav-desktop, .main-nav  {
+  display: none;
+}
+
+.nav.mobile a,
+.nav.mobile a:hover,
+.nav.mobile a:active,
+.nav.mobile a:focus {
+    color: #fff;
+}
+
+.sidebar .nav-desktop {
+  display:block;
+}
+
+@media only screen and (max-width: 880px) {
+    .content,.sidebar {
+        width: auto;
+        float: none;
+    }
+
+    nav-cover.mobile, .main-nav {
+      display: block;
+    }
+
+    .nav-opened .nav.mobile {
+      display: block;
+    }
+
+    .nav-closed .nav.mobile {
+      display: none;
+    }
+
+    .nav-desktop {
+      display: none;
+    }
+
+    .blog-logo img {
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+    }
+}
+
+.sidebar .nav.mobile {
+  display:none;
+}
+
+.nav-opened menu-button {
+  display:none;
+}
+
+.poweredby, .copyright {
+    display: block;
+}
+
+aside.read-next {
+  clear:both; /* make sure the "read next" suggestions are shown */
+}
+
+/* ==========================================================================
+   16. Elusive Font
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Elusive-Icons';
+  src: url('../fonts/elusiveicons-webfont.eot?v=2.0.0');
+  src: url('../fonts/elusiveicons-webfont.eot?#iefix&v=2.0.0') format('embedded-opentype'), url('../fonts/elusiveicons-webfont.woff?v=2.0.0') format('woff'), url('../fonts/elusiveicons-webfont.ttf?v=2.0.0') format('truetype'), url('../fonts/elusiveicons-webfont.svg?v=2.0.0#elusiveiconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.elusive-icon:before {
+    font-family: "Elusive-Icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: none;
+    width: 1em;
+    margin-right: .4em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    color: #6F787D;
+}
+
+.nav.mobile .elusive-icon:before {
+  color: #ddd;
+  font-size: 0.7em;
+}
+
+.elusive-icon.behance:before, .elusive-icon.Behance:before {
+  content: "\f113";
+}
+
+.elusive-icon.deviantart:before, .elusive-icon.Deviantart:before, .elusive-icon.DeviantArt:before {
+  content: "\f143";
+}
+.elusive-icon.digg:before, .elusive-icon.Digg:before {
+  content: "\f144";
+}
+
+.elusive-icon.dribbble:before, .elusive-icon.Dribbble:before {
+  content: "\f147";
+}
+
+.elusive-icon.email:before {
+    content: "\f14b";
+}
+
+.elusive-icon.facebook:before, .elusive-icon.Facebook:before, .elusive-icon.FaceBook:before {
+  content: "\f152";
+}
+
+.elusive-icon.flickr:before, .elusive-icon.Flickr:before {
+  content: "\f162";
+}
+
+.elusive-icon.foursquare:before, .elusive-icon.Foursquare:before, .elusive-icon.FourSquare:before {
+  content: "\f16c";
+}
+
+.elusive-icon.github:before, .elusive-icon.Github:before, .elusive-icon.GitHub:before {
+  content: "\f173";
+}
+
+.elusive-icon.googleplus:before, .elusive-icon.GooglePlus:before, .elusive-icon.googlePlus:before {
+  content: "\f178";
+}
+
+.elusive-icon.instagram:before, .elusive-icon.Instagram:before {
+  content: "\f193";
+}
+
+.elusive-icon.linkedin:before, .elusive-icon.Linkedin:before, .elusive-icon.LinkedIn:before {
+  content: "\f19d";
+}
+
+.elusive-icon.picasa:before, .elusive-icon.Picasa:before  {
+  content: "\f1c1";
+}
+
+.elusive-icon.reddit:before, .elusive-icon.Reddit:before  {
+  content: "\f1d8";
+}
+
+.elusive-icon.rss:before {
+  content: "\f1e8";
+}
+
+.elusive-icon.slideshare:before, .elusive-icon.Slideshare:before, .elusive-icon.SlideShare:before {
+  content: "\f1f5";
+}
+
+.elusive-icon.spotify:before, .elusive-icon.Spotify:before {
+  content: "\f1fa";
+}
+
+.elusive-icon.soundcloud:before, .elusive-icon.Soundcloud:before, .elusive-icon.SoundCloud:before {
+  content: "\f1f8";
+}
+
+.elusive-icon.vimeo:before, .elusive-icon.Vimeo:before {
+  content: "\f221";
+}
+
+.elusive-icon.twitter:before, .elusive-icon.Twitter:before {
+  content: "\f215";
+}
+
+.elusive-icon.tumblr:before, .elusive-icon.Tumblr:before {
+  content: "\f214";
+}
+
+.elusive-icon.vkontakte:before, .elusive-icon.Vkontakte:before, .elusive-icon.VKontakte:before {
+  content: "\f222";
+}
+
+.elusive-icon.youtube:before, .elusive-icon.Youtube:before, .elusive-icon.YouTube:before {
+  content: "\f22e";
+}
+
+/* ==========================================================================
+   17. Theme Customizations
+   ========================================================================== */
+
+.read-next-story h2 {
+  font-size: 2.4rem;
+}
+
+.read-next-story.no-cover p {
+  font-size: 1.8rem;
+}
+
+.read-next-story .post {
+  margin-bottom: 0;
+}
 
 /* ==========================================================================
    End of file. Animations should be the last thing here. Do not add stuff
